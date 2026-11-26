@@ -11,6 +11,11 @@
 <meta property="og:url" content="https://kmnsts.github.io/">
 <meta property="og:image" content="https://kmnsts.github.io/media/preview.jpg">
 <meta name="twitter:card" content="summary_large_image">
+<script>
+(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,'script','https://mc.yandex.ru/metrika/tag.js?id=114703366','ym');
+ym(114703366,'init',{ssr:true,webvisor:true,clickmap:true,ecommerce:"dataLayer",referrer:document.referrer,url:location.href,accurateTrackBounce:true,trackLinks:true});
+document.addEventListener('click',function(ev){var a=ev.target.closest&&ev.target.closest('[data-goal]');if(a)ym(114703366,'reachGoal',a.getAttribute('data-goal'));});
+</script>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230D0D0D'/%3E%3Cpath d='M16 4l3.4 8.4H28l-7 5.3 2.7 8.6L16 21.1l-7.7 5.2 2.7-8.6-7-5.3h8.6z' fill='%23D9FF3F'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -301,6 +306,7 @@ footer a { min-height: 36px; display: inline-flex; align-items: center; text-und
 
 </head>
 <body>
+<noscript><div><img src="https://mc.yandex.ru/watch/114703366" style="position:absolute;left:-9999px" alt=""></div></noscript>
 <header class="nav">
   <div class="wrap">
     <svg class="logo" viewBox="0 0 40 40" aria-label="kmnsts" role="img"><path d="M20 1l4.2 11.7L35.9 8l-4.7 11.6L39 20l-11.7 4.2L32 35.9l-11.6-4.7L20 39l-4.2-11.7L4.1 32l4.7-11.6L1 20l11.7-4.2L8 4.1l11.6 4.7z" fill="#E1FF60" stroke="#141414" stroke-width="1.6" stroke-linejoin="round"/></svg>
@@ -454,7 +460,7 @@ footer a { min-height: 36px; display: inline-flex; align-items: center; text-und
           <span class="pill lime" style="align-self:flex-start">честно о сроках</span>
           <p>Урок идёт 16 минут, а на настройку заложи несколько вечеров. Первая версия ролика будет минут через 15–20, а та, что понравится, может быть пятой или десятой. Зато потом монтаж рубрики запускается одним кодовым словом.</p>
         </div>
-            <div class="meta"><span class="price">99 000 <small>₩</small><span class="pro">+ Claude Pro ~$20/мес</span></span><a class="btn" href="https://t.me/kmnststeam_bot" rel="noopener">Хочу урок<img class="cursor" src="media/el-cursor.webp" alt="" width="160" height="258" style="right:-20px;bottom:-24px"></a></div>
+            <div class="meta"><span class="price">99 000 <small>₩</small><span class="pro">+ Claude Pro ~$20/мес</span></span><a class="btn" href="https://t.me/kmnststeam_bot" data-goal="lesson" rel="noopener">Хочу урок<img class="cursor" src="media/el-cursor.webp" alt="" width="160" height="258" style="right:-20px;bottom:-24px"></a></div>
           </div>
         </article>
         <article class="offer" id="consult">
@@ -471,7 +477,7 @@ footer a { min-height: 36px; display: inline-flex; align-items: center; text-und
                 <li><b>04</b><span>7 дней онлайн<small>Неделю я на связи и помогаю докрутить</small></span></li></ol></details>
             </div>
             <p class="small muted">Уже купила урок? Доплата 451 000 ₩.</p>
-            <div class="meta"><span class="price">550 000 <small>₩</small><span class="pro">+ Claude Pro ~$20/мес</span></span><a class="btn dark" href="https://t.me/kmnststeam_bot" rel="noopener">Хочу консультацию</a></div>
+            <div class="meta"><span class="price">550 000 <small>₩</small><span class="pro">+ Claude Pro ~$20/мес</span></span><a class="btn dark" href="https://t.me/kmnststeam_bot" data-goal="consult" rel="noopener">Хочу консультацию</a></div>
           </div>
         </article>
       </div>
@@ -540,7 +546,7 @@ footer a { min-height: 36px; display: inline-flex; align-items: center; text-und
         <img class="clip" src="media/el-clip.webp" alt="" width="320" height="260">
         <h2 class="caps" id="h-final">Есть вопросы?</h2>
         <p>Напиши, ответим и поможем выбрать формат.</p>
-        <a class="btn dark" style="align-self:flex-start" href="https://t.me/kmnststeam_bot" rel="noopener">Связаться</a>
+        <a class="btn dark" style="align-self:flex-start" href="https://t.me/kmnststeam_bot" data-goal="contact" rel="noopener">Связаться</a>
       </div>
     </div>
   </section>
