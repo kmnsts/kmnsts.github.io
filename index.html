@@ -86,27 +86,7 @@ section { position: relative; padding-block: 72px; }
 .nav .pill { min-height: 32px; font-size: 12px; padding: 3px 8px 4px; }
 @media (min-width: 420px) { .nav ul { gap: 6px; } .nav .pill { font-size: 13px; padding: 4px 14px 5px; } }
 
-
-.hero { padding: 0; background: var(--ink); color: var(--white); }
-.hero > img { width: 100%; height: clamp(690px, 182vw, 900px); object-fit: cover; object-position: 50% 22%; }
-.hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(20,20,20,.2) 0%, rgba(20,20,20,0) 26%, rgba(20,20,20,.15) 45%, rgba(20,20,20,.9) 100%); pointer-events: none; }
-.hero-in { position: absolute; inset: 0; z-index: 1; display: grid; grid-template-rows: auto 1fr auto; }
-.hero-in .wrap { width: 100%; }
-.hero .role { padding-top: 18px; display: flex; justify-content: flex-end; }
-.hero .role span { font-weight: 800; font-size: 13px; letter-spacing: .06em; text-transform: uppercase; }
-.namebox { position: relative; align-self: end; justify-self: center; padding: 40px 0 6px; }
-.name { font-family: var(--script); font-weight: 400; color: var(--lime); font-size: clamp(84px, 24vw, 200px); line-height: .85; margin: 0; text-align: center; transform: rotate(-6deg); text-shadow: 0 4px 30px rgba(0,0,0,.35); }
-.name span { display: block; }
-.name span + span { padding-left: .9em; }
-.namebox .pill { position: absolute; background: var(--white); color: var(--ink); border-color: var(--ink); }
-.namebox .p1 { top: 22px; right: -4px; transform: rotate(4deg); }
-.namebox .p2 { bottom: 4px; left: 0; transform: rotate(-3deg); background: var(--lime); }
 .cursor { position: absolute; width: 34px; height: auto; pointer-events: none; filter: drop-shadow(0 2px 2px rgba(0,0,0,.35)); }
-.namebox .cursor { top: 50px; right: -30px; }
-.hero .offer-line { padding-block: 34px 40px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 22px; }
-.hero .offer-line p { font-size: 14px; line-height: 1.3; font-weight: 500; max-width: 340px; text-wrap: balance; }
-@media (min-width: 760px) { .hero .offer-line p { font-size: 16px; max-width: 400px; } }
-.hero .offer-line .actions { justify-content: center; }
 
 .ticker { padding: 0; background: var(--lime); border-block: 1.5px solid var(--ink); overflow: hidden; }
 .ticker-track { display: flex; width: max-content; animation: ticker 36s linear infinite; }
@@ -158,19 +138,6 @@ section { position: relative; padding-block: 72px; }
 .what h3 { font-size: 16px; font-weight: 600; letter-spacing: -.01em; margin: 0; line-height: 1.2; }
 .what .num { font-family: var(--caps); font-weight: 700; font-size: 24px; line-height: 1; }
 
-
-.vs { display: grid; gap: 12px; }
-.vs article { border-radius: 6px; padding: 22px 20px; display: flex; flex-direction: column; gap: 12px; }
-.vs .bad { border: 1.5px solid var(--ink); }
-.vs .good { background: var(--lime); }
-.vs h3 { font-size: 21px; font-weight: 600; letter-spacing: -.01em; margin: 0; }
-.vs ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
-.vs li { position: relative; padding-left: 26px; }
-.vs .bad li::before { content: "✕"; position: absolute; left: 2px; top: 0; font-weight: 700; }
-.vs .good li::before { content: "✦"; position: absolute; left: 2px; top: 0; }
-.firstv { display: grid; grid-template-columns: 130px 1fr; gap: 16px; align-items: center; border: 1.5px solid var(--ink); border-radius: 6px; padding: 16px; }
-.firstv video { width: 100%; aspect-ratio: 9 / 16; object-fit: cover; border-radius: 10px; border: 1.5px solid var(--ink); background: var(--ink); }
-.firstv h3 { font-size: 19px; font-weight: 600; margin: 0 0 6px; }
 .pixel { display: grid; gap: 3px; flex: none; }
 .pixel i { aspect-ratio: 1; background: var(--ink); }
 .pixel i.o { background: transparent; }
@@ -288,14 +255,11 @@ footer a { min-height: 36px; display: inline-flex; align-items: center; text-und
 @media (max-width: 759px) { .decor { width: 150px !important; } }
 @media (min-width: 760px) {
   section { padding-block: 100px; }
-  .hero > img { height: min(90vh, 860px); min-height: 640px; object-position: 50% 22%; }
   .me { grid-template-columns: 1.4fr .6fr; }
   .what { grid-template-columns: repeat(3, 1fr); }
   .what article:nth-child(3) { grid-column: auto; }
   .what article { padding: 20px 18px; font-size: 15px; }
   .what h3 { font-size: 19px; }
-  .vs { grid-template-columns: 1fr 1fr; }
-  .vs .firstv { grid-column: 1 / -1; grid-template-columns: 160px 1fr; }
   .offer { grid-template-columns: 52px 1fr; padding: 32px; }
   .gets { grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
   .proof { width: 280px; top: -22px; right: -10px; }
@@ -321,23 +285,6 @@ footer a { min-height: 36px; display: inline-flex; align-items: center; text-und
 </header>
 
 <main>
-  <section class="hero" aria-labelledby="h-name">
-    <img src="media/nastya-meetup.webp" alt="Настя на своей творческой встрече в Инчхоне" width="713" height="892">
-    <div class="hero-in">
-      <div class="wrap role"><span>content creator</span></div>
-      <div class="namebox">
-        <h1 class="name" id="h-name"><span>Настя</span><span>Ким</span></h1>
-        <span class="pill p1">монтаж в Claude</span>
-        <img class="cursor" src="media/el-cursor.webp" alt="" width="160" height="258">
-        <span class="pill p2">дизайнер</span>
-      </div>
-      <div class="wrap offer-line">
-        <p>Урок и личная консультация: научу монтировать рилс в Claude так, чтобы он выглядел как твой</p>
-        <div class="actions"><a class="btn" href="#lesson">Смотреть урок</a><a class="btn ghost" href="#consult">Консультация</a></div>
-      </div>
-    </div>
-  </section>
-
   <div class="ticker" aria-hidden="true">
     <div class="ticker-track">
       <span>Урок: монтаж Reels в Claude</span><span>Консультация 4 часа + 7 дней онлайн</span><span>Свой стиль, а не шаблон</span><span>Монтаж рубрики одним кодовым словом</span>
@@ -384,27 +331,6 @@ footer a { min-height: 36px; display: inline-flex; align-items: center; text-und
         <article><span class="num">03</span><h3>Он запоминает твой стиль</h3><p>Проект, документ стиля и скиллы хранят твои правила. Не нужно каждый раз объяснять заново: пишешь кодовое слово рубрики, прикрепляешь исходники и получаешь ролик.</p></article>
       </div>
       <p class="small muted">Программировать не нужно. Понадобится компьютер на Mac или Windows и подписка Claude Pro, около $20 в месяц.</p>
-    </div>
-  </section>
-
-  <section aria-labelledby="h-why" style="padding-top:0">
-    <img class="decor d-right" src="media/el-tray-ornate.webp" alt="" width="760" height="741" style="width:300px;top:40px">
-    <div class="wrap stack">
-      <h2 class="grot g-xl" id="h-why">Почему один промпт — это <span class="word" style="white-space:nowrap">не круто</span> в перспективе</h2>
-      <div class="vs">
-        <article class="bad"><h3>Один промпт и шаблонный монтаж</h3><ul>
-          <li>Ролик похож на тысячи других, и аудитория не запоминает тебя</li>
-          <li>Каждый раз объясняешь заново, и результат каждый раз разный</li>
-          <li>Правки забываются уже в следующем ролике</li></ul></article>
-        <article class="good"><h3>Система</h3><ul>
-          <li>Твой вкус записан правилами в документ стиля</li>
-          <li>Каждая правка дописывается в стиль, и следующий ролик выходит лучше</li>
-          <li>Рубрика монтируется одним кодовым словом</li></ul></article>
-        <div class="firstv">
-          <video src="media/first-version.mp4" poster="media/first-version.jpg" muted loop playsinline autoplay preload="metadata" aria-label="Первая версия ролика из урока"></video>
-          <div><h3>Первая версия по системе</h3><p>Так выглядит первый ролик, который Claude собрал в уроке по документу стиля. Без шаблонов, в моём стиле.</p></div>
-        </div>
-      </div>
     </div>
   </section>
 
@@ -613,11 +539,6 @@ footer a { min-height: 36px; display: inline-flex; align-items: center; text-und
     });
   });
   sync();
-})();
-(function () {
-  var v = document.querySelector('.firstv video');
-  if (!v) return;
-  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) { v.removeAttribute('autoplay'); v.pause(); v.controls = true; }
 })();
 </script>
 
